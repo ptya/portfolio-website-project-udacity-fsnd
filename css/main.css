@@ -1,0 +1,190 @@
+body,
+html {
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  color: #2d3c49;
+  font-family: 'Roboto', monospace;
+  font-size: 12px;
+  padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/*
+*
+* Header
+*
+*/
+
+.header {
+  background-color: #fff;
+  border-bottom: 2px solid #7d97ad;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.header-logo {
+  border: 2px solid #02b3e4;
+  border-radius: 50%;
+  height: 60px;
+  opacity: 0.9;
+  width: 60px;
+}
+
+.header-title {
+  font-size: 2.75em;
+  font-weight: 100;
+}
+
+/*
+*
+* Main
+*
+*/
+
+.main {
+  margin-top: 86px;
+  width: 100%;
+}
+
+.hero-pic {
+  max-height: 175px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.work-title {
+  color: #7d97ad;
+  font-size: 1.5em;
+  margin: 15px 5px 5px;
+}
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+.work-item {
+  display: flex;
+  flex-basis: 32%;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.work-item p {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.work-item a {
+  color: #2d3c49;
+  font-size: 0.75em;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.work-item a:hover {
+  text-decoration: underline;
+}
+
+.work-item-pic {
+  max-height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*
+*
+* 1st breakpoint to increase size, unstick header
+* and change flex-direction.
+*
+*/
+
+@media screen and (min-width: 500px) {
+  .header {
+    margin-bottom: 10px;
+    padding: 0 0 10px;
+    position: unset;
+    width: 100%;
+  }
+
+  .header-logo {
+    height: 75px;
+    width: 75px;
+  }
+
+  .header-title {
+    font-size: 3.5em;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .work-container {
+    flex-direction: row;
+  }
+
+  .work-item {
+    flex-grow: 0;
+    margin-bottom: 0;
+  }
+
+  .work-item-pic {
+    max-height: unset;
+  }
+}
+
+/*
+*
+* 2nd breakpoint to further increase size suitable for desktop.
+*
+*/
+
+@media screen and (min-width: 701px) {
+  .header-title {
+    font-size: 4em;
+  }
+
+  .header-subtitle {
+    font-size: 1.5em;
+  }
+
+  .hero-pic {
+    max-height: 250px;
+  }
+
+  .work-item p {
+    font-size: 2em;
+  }
+
+  .work-item a {
+    font-size: 1em;
+  }
+
+  .work-title {
+    font-size: 2em;
+  }
+}
